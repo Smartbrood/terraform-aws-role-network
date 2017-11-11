@@ -16,6 +16,9 @@ module "network" {
     public_subnets = ["10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24"]
     enable_nat_gateway = "false"
 
+    ingress_rules_from_any = ["ssh-22-tcp", "http-80-tcp", "https-443-tcp"]
+    egress_rules_to_any    = ["any"]
+
     vpn_enabled    = "true"
     cgw_ip         = "1.1.1.1"
     bgp_asn        = "6500"
