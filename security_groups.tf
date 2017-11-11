@@ -4,8 +4,8 @@ module "security_group_ssh" {
   description = "SSH security group"
   vpc_id      = "${module.vpc.vpc_id}"
 
-  ingress_rules_from_any = ["ssh-22-tcp"]
-  egress_rules_to_any    = ["any"]
+  ingress_rules_from_any = "${var.ingress_rules_from_any}"
+  egress_rules_to_any    = "${var.egress_rules_from_any}"
 
   tags               = "${var.tags}"
 }

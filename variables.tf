@@ -6,6 +6,18 @@ variable "vpc_name" {
   description = "Name for VPC"
 }
 
+variable "ingress_rules_from_any" {
+  type = "list"
+  description = "List of open ingress ports"
+  default     = ["ssh-22-tcp"]
+}
+
+variable "egress_rules_to_any" {
+  type = "list"
+  description = "List of open egress ports"
+  default     = ["any"]
+}
+
 variable "tags" {
   type = "map"
   description = "Map with tags"
