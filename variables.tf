@@ -37,6 +37,16 @@ variable "enable_nat_gateway" {
   description = "Enable nat gateway"
 }
 
+variable "enable_dns_hostnames" {
+  description = "Should be true if you want to use private DNS within the VPC"
+  default     = false
+}
+
+variable "enable_dns_support" {
+  description = "Should be true if you want to use private DNS within the VPC"
+  default     = false
+}
+
 variable "vpn_enabled" {
   description = "For ability to enable/disable VPN creation"
   default     = "false"
