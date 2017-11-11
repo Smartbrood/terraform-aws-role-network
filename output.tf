@@ -13,3 +13,8 @@ output "customer_gateway_configuration" {
   value = "${module.vpn.customer_gateway_configuration}"
 }
 
+output "vpc_id" {
+  description = "The ID of the VPC"
+  value       = "${module.vpc.vpc_id}"
+}
+
