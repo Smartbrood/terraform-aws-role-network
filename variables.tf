@@ -23,6 +23,26 @@ variable "egress_rules_to_any" {
   default     = ["any"]
 }
 
+variable "ingress_rules" {
+  description = "List of ingress rules to create by name"
+  default     = []
+}
+
+variable "ingress_cidr_blocks" {
+  description = "List of IPv4 CIDR ranges to use on all ingress rules"
+  default     = []
+}
+
+variable "egress_rules" {
+  description = "List of egress rules to create by name"
+  default     = []
+}
+
+variable "egress_cidr_blocks" {
+  description = "List of IPv4 CIDR ranges to use on all egress rules"
+  default     = []
+}
+
 variable "tags" {
   type = "map"
   description = "Map with tags"
