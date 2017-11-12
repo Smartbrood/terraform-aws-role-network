@@ -3,9 +3,9 @@ output "public_subnets" {
   value       = "${module.vpc.public_subnets}"
 }
 
-output "security_group_ssh_id" {
+output "security_group_id" {
   description = "SSH security group id"
-  value       = "${module.security_group_ssh.security_group_id}"
+  value       = "${module.security_group.security_group_id}"
 }
 
 output "customer_gateway_configuration" {
