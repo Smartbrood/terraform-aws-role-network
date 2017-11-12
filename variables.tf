@@ -6,6 +6,11 @@ variable "vpc_name" {
   description = "Name for VPC"
 }
 
+variable "security_group_name" {
+  description = "Name for security group"
+  default     = "terraform-role-network-security-group"
+}
+
 variable "ingress_rules_from_any" {
   type = "list"
   description = "List of open ingress ports"
