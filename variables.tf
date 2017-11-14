@@ -77,9 +77,14 @@ variable "vpn_enabled" {
   default     = "false"
 }
 
-variable "cgw_ip" { 
+variable "cgw_ip_1" { 
   default = "false"
-  description = "Customer VPN gateway IP"
+  description = "Customer VPN gateway primary IP"
+}
+
+variable "cgw_ip_2" { 
+  default = "false"
+  description = "Customer VPN gateway secondary IP"
 }
 
 variable "bgp_asn" { 
